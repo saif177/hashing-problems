@@ -1,5 +1,3 @@
-from collections import Counter
-
 def isSubSet(arr, subset):
     set1 = set(arr)
 
