@@ -5,12 +5,13 @@ def twoSum(arr, target) :
     for i in range(len(arr)):
         remain = target - arr[i]
         if remain in mp:
-            return [mp[remain], i]
+            return True
+            #return [mp[remain], i]
         mp[arr[i]] = i  
-    return []
+    return False
 
 
-nums = [2, 7, 11, 15]
-target = 9
+nums = [0, -1, 2, -3, 1]
+target = -2
 
 print(twoSum(nums, target))
