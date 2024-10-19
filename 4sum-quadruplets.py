@@ -1,16 +1,15 @@
+from collections import defaultdict
 def count4SumPairs(arr, k):
     n = len(arr)
     count = 0
-    hash = {}
+    hash = defaultdict(int)
 
     #Step.1 Store reminder for target - (ar[i] + ar[j])
     for i in range(n):
         for j in range(i + 1, n):
             pair_sum = arr[i] + arr[j]
-            if pair_sum in hash:
-                hash[pair_sum] += 1
-            else:
-                hash[pair_sum] = 1
+            hash[pair_sum] += 1
+            
 
     #Step.2 Find reminder of quadruplet
     for i in range(n):
